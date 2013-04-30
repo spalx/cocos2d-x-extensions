@@ -41,6 +41,11 @@ CCPageControl::~CCPageControl()
     fullDot->release();
 }
 
+CCSize CCPageControl::sizeForNumberOfPages(int n)
+{
+    return CCSizeMake(n*fullDot->getContentSize().width, fullDot->getContentSize().height);
+}
+
 void CCPageControl::updateVisibility()
 {
     if (hidesForSinglePage && numberOfPages==1) {
@@ -79,7 +84,7 @@ void CCPageControl::setNumberOfPages(int n)
     if (n>=0 && n!=numberOfPages) {
         numberOfPages = n;
         removeAllChildrenWithCleanup(true);
-        setContentSize(CCSizeMake(n*fullDot->getContentSize().width, fullDot->getContentSize().height));
+        setContentSize(sizeForNumberOfPages(n));
         
         for (int i=0; i<n; i++) {
             CCSprite * sprite = CCSprite::create(kPageControlEmptyDotFile);

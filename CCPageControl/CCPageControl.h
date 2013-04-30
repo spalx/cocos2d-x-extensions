@@ -39,6 +39,7 @@ public:
     int getNumberOfPages(){return numberOfPages;}
     void setHidesForSinglePage(bool h);
     bool getHidesForSinglePage(){return hidesForSinglePage;}
+    cocos2d::CCSize sizeForNumberOfPages(int n);
 private:
     int currentPage, numberOfPages;
     bool hidesForSinglePage;
