@@ -40,8 +40,8 @@ bool CCSwipeGestureRecognizer::checkSwipeDirection(CCPoint p1, CCPoint p2, int &
 {
     bool right = p2.x-p1.x>=kSwipeMinDistance;
     bool left = p1.x-p2.x>=kSwipeMinDistance;
-    bool up = p1.y-p2.y>=kSwipeMinDistance;
-    bool down = p2.y-p1.y>=kSwipeMinDistance;
+    bool down = p1.y-p2.y>=kSwipeMinDistance;
+    bool up = p2.y-p1.y>=kSwipeMinDistance;
     
     if (right) {
         if ((direction & kSwipeGestureRecognizerDirectionRight) == kSwipeGestureRecognizerDirectionRight) {
