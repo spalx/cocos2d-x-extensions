@@ -79,7 +79,7 @@ CCRange CCRange::unionRange(const CCRange& other)
 
 bool CCRange::containsLocation(unsigned int loc)
 {
-    return (loc-location<length);
+    return (loc>=location && loc<=location+length-1);
 }
 
 unsigned int CCRange::max()
