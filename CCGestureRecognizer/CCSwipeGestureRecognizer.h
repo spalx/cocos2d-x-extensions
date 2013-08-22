@@ -43,6 +43,7 @@ public:
     CREATE_FUNC(CCSwipe);
     CCSwipeGestureRecognizerDirection direction;
     cocos2d::CCPoint location;
+    cocos2d::CCPoint finalLocation;
 };
 
 class CCSwipeGestureRecognizer : public CCGestureRecognizer
