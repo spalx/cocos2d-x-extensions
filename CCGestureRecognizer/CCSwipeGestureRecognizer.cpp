@@ -111,7 +111,8 @@ void CCSwipeGestureRecognizer::ccTouchEnded(CCTouch * pTouch, CCEvent * pEvent)
         CCSwipe * swipe = CCSwipe::create();
         swipe->direction = (CCSwipeGestureRecognizerDirection)dir;
         swipe->location = initialPosition;
-        
+       	swipe->finalLocation = finalPosition;
+
         gestureRecognized(swipe);
         if (cancelsTouchesInView) stopTouchesPropagation(createSetWithTouch(pTouch), pEvent); //cancel touch over other views
     }
