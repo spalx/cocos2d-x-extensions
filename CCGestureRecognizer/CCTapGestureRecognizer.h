@@ -45,17 +45,17 @@ public:
     bool init();
     ~CCTapGestureRecognizer();
     CREATE_FUNC(CCTapGestureRecognizer);
-    
+
     virtual bool ccTouchBegan(cocos2d::CCTouch * pTouch, cocos2d::CCEvent * pEvent);
     virtual void ccTouchMoved(cocos2d::CCTouch * pTouch, cocos2d::CCEvent * pEvent){};
     virtual void ccTouchEnded(cocos2d::CCTouch * pTouch, cocos2d::CCEvent * pEvent);
 protected:
     CC_SYNTHESIZE(unsigned int, numberOfTapsRequired, NumberOfTapsRequired);
 private:
-    int taps;
+    unsigned int taps;
     cocos2d::CCPoint initialPosition, finalPosition;
     struct cocos2d::cc_timeval startTime, endTime;
-    
+
     void stopGestureRecognition();
 };
 
