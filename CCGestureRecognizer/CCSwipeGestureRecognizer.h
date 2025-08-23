@@ -27,6 +27,7 @@ THE SOFTWARE.
 
 #define kSwipeMaxDuration 300
 #define kSwipeMinDistance 60
+#define kSwipeMaxAngle    30
 
 typedef enum {
     kSwipeGestureRecognizerDirectionRight = 1 << 0,
